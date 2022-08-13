@@ -13,7 +13,8 @@ class App extends React.Component{
     //    title: 'hello from bridgelabz' 
     //  }
     this.state = {
-      userName: ''
+      userName: '',
+      nameError:''
     }
   }
 
@@ -22,10 +23,17 @@ class App extends React.Component{
     console.log("save button is clicked!",$event);
     window.open(this.url, "blank");
   }
-  //onChange Function
+  //onChange Function..Regex
   onNameChange = (event) => {
     console.log("value is",event.target.value);
+    const nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+    //set title using setState method
     this.setState({ userName: event.target.value})
+    if (nameRegex.test(event.target.value)){
+      this.setState({nameError: ''})
+    }else{
+      this.setState({ nameError: 'Name is Incorrect'})
+    }
   }
 
 render() {
@@ -43,6 +51,7 @@ render() {
      </div> 
     <div>
     <input onChange = {this.onNameChange} />
+    <span className="error-output">{this.state.nameError}</span>
     </div>
     </>
   );
