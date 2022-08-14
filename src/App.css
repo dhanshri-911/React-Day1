@@ -23,7 +23,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -31,6 +30,7 @@ img {
   display: block;
   margin: 0 auto;
   width: 20%;
+  height: 80%;
 }
 error-output {
   margin-left: 10px;
@@ -38,6 +38,44 @@ error-output {
   font-style: italic;
   color: red;
 }
+html {
+  font-size: 14px;
+  font-family:'Open Sans',sans-serif;
+
+}
+html {
+  background-color:#00539F;
+}
+p,li {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  letter-spacing: 0.75px;
+}
+
+input{
+  margin:auto;
+  width: 125px;
+  display: block;
+  border: 3px solid blue;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  text-size-adjust: 100;
+  margin: 0;
+  padding: 20px 0;
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+body {
+  width: 650px;
+  margin: 0 auto;
+  background-color: rgb(225, 137, 5);
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
 
 @keyframes App-logo-spin {
   from {
